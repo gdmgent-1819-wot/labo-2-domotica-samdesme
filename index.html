@@ -1,0 +1,126 @@
+<html>
+<head>
+	<title>Domotica</title>
+  <link rel="stylesheet" href="assets/css/app.css">
+  <link href="https://fonts.googleapis.com/css?family=Futura" rel="stylesheet">
+
+</head>
+<body>
+<h1 id="title">Domotica</h1>
+<p id="choose">Bestuur je woning</p>
+
+  <div id="art">
+    <div class="row">
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel lights" style="background-color:yellow;" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel lights" style="background-color:yellow;" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+    </div>
+    <div class="row">
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+    </div>
+    <div class="row">
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+    </div>
+    <div class="row">
+      <div class="pixel sockets" style="background-color:lightblue;" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel sockets" style="background-color:lightblue;" onclick="setPixelColour(this)"></div>
+    </div>
+    <div class="row">
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel lights" style="background-color:yellow;" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel lights" style="background-color:yellow;" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+    </div>
+    <div class="row">
+      <div class="pixel doorFront" style="background-color:chartreuse;" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel doorBack" style="background-color:red;" onclick="setPixelColour(this)"></div>
+    </div>
+    <div class="row">
+      <div class="pixel doorFront" style="background-color:chartreuse;" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel doorBack" style="background-color:red;" onclick="setPixelColour(this)"></div>
+    </div>
+    <div class="row">
+      <div class="pixel doorFront" style="background-color:chartreuse;" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel sockets" style="background-color:lightblue;" onclick="setPixelColour(this)"></div>
+      <div class="pixel sockets" style="background-color:lightblue;" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel" onclick="setPixelColour(this)"></div>
+      <div class="pixel doorBack" style="background-color:red;" onclick="setPixelColour(this)"></div>
+    </div>
+  </div>
+
+  <div id="colorSelect">
+    <div id="red" class="pen" style="background-color:red;" onclick="setPenColour('red')">Achterdeur</div><p class="state" id="stateBackDoor"></p>
+    <div id="chartreuse" class="pen" style="background-color:chartreuse;" onclick="setPenColour('chartreuse')">Voordeur</div><p class="state" id="stateFrontDoor"></p>
+    <div id="lightblue" class="pen" style="background-color:lightblue;" onclick="setPenColour('lightblue')">Stopcontacten</div><p class="state" id="stateSockets"></p>
+    <div id="yellow" class="pen" style="background-color:yellow;" onclick="setPenColour('yellow')">Lichten</div><p class="state" id="stateLights"></p>
+  </div>
+
+  <a id="btnSave" href="#">Save</a>
+
+  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+  
+
+<script src="assets/js/app.js"></script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
