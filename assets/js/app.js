@@ -97,46 +97,51 @@ function setPixelColour(pixel) {
 
 }
 
+function loopPx() {
+  for (let i = 0; i < pixels.length; i++) {
 
-for (let i = 0; i < pixels.length; i++) {
+    // get background names from each pixel
+  
+    ArrPixel.push("0");
+    var pixel = pixels[i];
+    document.querySelectorAll(".pixel").forEach(el => {
+      switch (pixel.style.backgroundColor) {
+        case "red":
+          ArrPixel[i] = "rd";
+          break;
+        case "chartreuse":
+          ArrPixel[i] = "gr";
+          break;
+        case "lightblue":
+          ArrPixel[i] = "bl";
+          break;
+        case "yellow":
+          ArrPixel[i] = "y";
+          break;
+        case "darkred":
+          ArrPixel[i] = "darkrd";
+          break;
+        case "darkgreen":
+          ArrPixel[i] = "darkgr";
+          break;
+        case "blue":
+          ArrPixel[i] = "darkbl";
+          break;
+        case "darkkhaki":
+          ArrPixel[i] = "darky";
+          break;
+        default:
+          ArrPixel[i] = "0";
+      }
+    });
+  }
 
-  // get background names from each pixel
-
-  ArrPixel.push([255, 255, 255]);
-  var pixel = pixels[i];
-  document.querySelectorAll(".pixel").forEach(el => {
-    switch (pixel.style.backgroundColor) {
-      case "red":
-        ArrPixel[i] = [255, 0, 0];
-        break;
-      case "chartreuse":
-        ArrPixel[i] = [0, 255, 0];
-        break;
-      case "lightblue":
-        ArrPixel[i] = [173, 216, 230];
-        break;
-      case "yellow":
-        ArrPixel[i] = [255, 255, 0];
-        break;
-      case "darkred":
-        ArrPixel[i] = [139, 0, 0];
-        break;
-      case "darkgreen":
-        ArrPixel[i] = [0, 100, 0];
-        break;
-      case "blue":
-        ArrPixel[i] = [0, 0, 255];
-        break;
-      case "darkkhaki":
-        ArrPixel[i] = [189, 183, 107];
-      default:
-        ArrPixel[i] = [255, 255, 255];
-    }
-  });
 }
+
 
 btnSave.addEventListener('click', e => {
   e.preventDefault();
+  loopPx();
   firebase.database().ref('domotica').push({ 'rgb': ArrPixel });
   console.log(ArrPixel);
 })
